@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F103C8 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -IG:\ProgARM\test1\stm_lib -IG:\ProgARM\test1 -IG:\ProgARM\test1\stm_lib\inc -IG:\ProgARM -IG:\ProgARM\test1\cmsis_boot -IG:\ProgARM\test1\cmsis">
+      <target file="stm32f10x_rcc.o" lastModified="168e5894ae9">
+         <source file="..\..\..\stm_lib\src\stm32f10x_rcc.c" lastModified="168e5788fb6"/>
+      </target>
+      <target file="startup_stm32f10x_md.o" lastModified="168e5894a3c">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_md.c" lastModified="168e5788642"/>
+      </target>
+      <target file="system_stm32f10x.o" lastModified="168e5894a08">
+         <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="168e5788647"/>
+      </target>
+      <target file="main.o" lastModified="168e5894a9f">
+         <source file="..\..\..\main.c" lastModified="168e588f42a"/>
+      </target>
+      <target file="stm32f10x_gpio.o" lastModified="168e5894a7f">
+         <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="168e578974a"/>
+      </target>
+   </processor>
+</history>
