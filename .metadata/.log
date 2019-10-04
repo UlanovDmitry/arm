@@ -163,3 +163,72 @@ Binding(ALT+CTRL+T,
 
 !ENTRY com.atollic.truestudio.productmanager 1 0 2019-09-27 12:57:39.892
 !MESSAGE Unloading product manager
+!SESSION 2019-10-04 13:09:12.276 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=ru_RU
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2019-10-04 13:09:16.804
+!MESSAGE Loading product manager
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2019-10-04 13:09:16.884
+!MESSAGE OS info: Windows 7, 6.1, x86
+
+!ENTRY TrueSTUDIO 1 0 2019-10-04 13:09:19.980
+!MESSAGE Target: STM32, Version: 9.3.0, Build date: 20190212-0734, Installation dir: /C:/Program Files (x86)/Atollic/TrueSTUDIO for STM32 9.3.0/ide/
+
+!ENTRY TrueSTUDIO 1 0 2019-10-04 13:09:19.981
+!MESSAGE Workspace: G:\ProgARM
+
+!ENTRY org.eclipse.jface 2 0 2019-10-04 13:09:25.153
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-10-04 13:09:25.153
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@361e23,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@516a3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.atollic.truestudio.integration.processorexpert 0 0 2019-10-04 13:09:36.568
+!MESSAGE Atollic TrueSTUDIO Processor Expert integration is up.
+
+!ENTRY edu.hawaii.ics.csdl.jupiter 1 0 2019-10-04 13:09:36.840
+!MESSAGE Code Review is up.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2019-10-04 13:10:15.129
+!MESSAGE blinkfr needs property 'com.atollic.truestudio.general.runtimelib.1505306753' fixed. Fixing to 'com.atollic.truestudio.ld.general.clib.small'.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2019-10-04 13:10:15.130
+!MESSAGE blinkfr needs property 'com.atollic.truestudio.toolchain_options.mcu.1825865122' fixed. Fixing to 'STM32F103C8'.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2019-10-04 13:10:15.130
+!MESSAGE blinkfr needs property 'com.atollic.truestudio.toolchain_options.vendor.1739486938' fixed. Fixing to 'STMicroelectronics'.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2019-10-04 13:10:15.151
+!MESSAGE blinkfr needs property 'com.atollic.truestudio.general.runtimelib.1898599980' fixed. Fixing to 'com.atollic.truestudio.ld.general.clib.small'.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2019-10-04 13:10:15.152
+!MESSAGE blinkfr needs property 'com.atollic.truestudio.toolchain_options.mcu.2158183' fixed. Fixing to 'STM32F103C8'.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2019-10-04 13:10:15.152
+!MESSAGE blinkfr needs property 'com.atollic.truestudio.toolchain_options.vendor.817431782' fixed. Fixing to 'STMicroelectronics'.
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-04 13:10:21.114
+!MESSAGE Indexed 'blinkfr' (28 sources, 115 headers) in 2,97 sec: 10 215 declarations; 34 889 references; 0 unresolved inclusions; 90 syntax errors; 54 unresolved names (0,12 %)
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2019-10-04 13:12:50.867
+!MESSAGE Unloading product manager
