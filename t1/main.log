@@ -1,0 +1,22 @@
+0000003c t _bus_fault
+0000003c t _dummy
+0000003c t _hard_fault
+0000003c t _memory_fault
+0000003c t _nmi_handler
+20002000 a STACKINIT
+0000001c T _start
+0000003c t _usage_fault
+00000048 t value
+./main.o  :
+section           size   addr
+.text               76      0
+.data                0      0
+.bss                 0      0
+.debug_line         66      0
+.debug_info         57      0
+.debug_abbrev       20      0
+.debug_aranges      32      0
+.ARM.attributes     33      0
+Total              284
+
+
