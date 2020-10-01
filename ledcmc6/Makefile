@@ -36,6 +36,7 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
+Src/io.c \
 Src/main.c \
 Src/system_stm32f1xx.c  
 
