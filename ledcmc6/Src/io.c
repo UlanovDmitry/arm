@@ -10,24 +10,35 @@ typedef struct {
 
 // Настройки портов 
 const tGPIO_Line IOs[] = {
-            { GPIOC, 13,  OUT_10MHz + OUT_PP, HIGH},	// Led out 
-			{ GPIOA, 12,  OUT_10MHz + OUT_PP, HIGH},	// Led in 
+			{ GPIOA, 0,  OUT_10MHz + OUT_PP, LOW},	 
+			{ GPIOA, 1,  OUT_10MHz + OUT_PP, LOW},	 
+			{ GPIOA, 2,  OUT_10MHz + OUT_PP, LOW},	 
+			{ GPIOA, 3,  OUT_10MHz + OUT_PP, LOW},	 
+			{ GPIOA, 4,  OUT_10MHz + OUT_PP, LOW},	 
+			{ GPIOA, 5,  OUT_10MHz + OUT_PP, LOW},	 
+			{ GPIOA, 6,  OUT_10MHz + OUT_PP, LOW},	 
+			{ GPIOA, 7,  OUT_10MHz + OUT_PP, LOW},	 
+
+			{ GPIOB, 0,  OUT_10MHz + OUT_PP, HIGH},	 
+			{ GPIOB, 1,  OUT_10MHz + OUT_PP, HIGH},	 
+			{ GPIOB, 2,  OUT_10MHz + OUT_PP, HIGH},	 
+			{ GPIOB, 3,  OUT_10MHz + OUT_PP, HIGH},	 
+			{ GPIOB, 4,  OUT_10MHz + OUT_PP, HIGH},	 
+			{ GPIOB, 5,  OUT_10MHz + OUT_PP, HIGH},	 
+
+			{ GPIOC, 13,  OUT_10MHz + OUT_PP, HIGH}	 
     };
 const uint32_t cIO_COUNT = sizeof(IOs)/sizeof(tGPIO_Line);
 
 // Установить настройки порта 
 void IO_ConfigLine(tIOLine Line, uint8_t Mode, uint8_t State) { 
-	if(IOs[Line].GPIO_Pin < 8) // Определяем в старший или младший регистр надо запихивать данные. 
-		{
+	if(IOs[Line].GPIO_Pin < 8){ // Определяем в старший или младший регистр надо запихивать данные. 
 		IOs[Line].GPIOx->CRL &=   ~(0x0F << (IOs[Line].GPIO_Pin * 4));	// Стираем биты
 		IOs[Line].GPIOx->CRL |=  Mode<<(IOs[Line].GPIO_Pin * 4);		// Вносим нашу битмаску, задвинув ее на нужное место. 
-		}
-	else
-		{
+	} else {
 		IOs[Line].GPIOx->CRH &=   ~(0x0F << ((IOs[Line].GPIO_Pin - 8)* 4));	// Аналогично для старшего регистра. 
 		IOs[Line].GPIOx->CRH |=    Mode<<((IOs[Line].GPIO_Pin - 8)* 4);
-		}
- 
+	} 
 	IOs[Line].GPIOx->ODR &= ~(1<<IOs[Line].GPIO_Pin);				// Прописываем ODR, устанавливая состояние по умолчанию. 
 	IOs[Line].GPIOx->ODR |= State<<IOs[Line].GPIO_Pin;
 }
@@ -64,7 +75,7 @@ void IO_Init(void) {
 
     // Тактирование нужных портов 
     RCC->APB2ENR	|= RCC_APB2ENR_IOPAEN;
-    // RCC->APB2ENR 	|= RCC_APB2ENR_IOPBEN;
+    RCC->APB2ENR 	|= RCC_APB2ENR_IOPBEN;
     RCC->APB2ENR	|= RCC_APB2ENR_IOPCEN;
     // RCC->APB2ENR	|= RCC_APB2ENR_IOPDEN;
     // RCC->APB2ENR	|= RCC_APB2ENR_IOPEEN;

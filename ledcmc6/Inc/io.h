@@ -32,8 +32,23 @@ typedef enum {
 
 // Назначения портов
 typedef enum {
-	io_LedOut = 0, 
-	io_LedIn = 1 
+	io_Led0 = 0, 
+	io_Led1 = 1,
+	io_Led2,
+	io_Led3,
+	io_Led4,
+	io_Led5,
+	io_Led6,
+	io_Led7,
+
+	io_Back0,
+	io_Back1,
+	io_Back2,
+	io_Back3,
+	io_Back4,
+	io_Back5,
+
+	io_Blink
 } tIOLine;
 
 // Функции работы с портами
