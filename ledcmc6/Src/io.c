@@ -19,12 +19,19 @@ const tGPIO_Line IOs[] = {
 			{ GPIOA, 6,  OUT_10MHz + OUT_PP, LOW},	 
 			{ GPIOA, 7,  OUT_10MHz + OUT_PP, LOW},	 
 
-			{ GPIOB, 0,  OUT_10MHz + OUT_PP, HIGH},	 
-			{ GPIOB, 1,  OUT_10MHz + OUT_PP, HIGH},	 
-			{ GPIOB, 2,  OUT_10MHz + OUT_PP, HIGH},	 
-			{ GPIOB, 3,  OUT_10MHz + OUT_PP, HIGH},	 
-			{ GPIOB, 4,  OUT_10MHz + OUT_PP, HIGH},	 
-			{ GPIOB, 5,  OUT_10MHz + OUT_PP, HIGH},	 
+			{ GPIOA, 8,   OUT_10MHz + OUT_PP, HIGH},	 
+			{ GPIOA, 9,   OUT_10MHz + OUT_PP, HIGH},	 
+			{ GPIOA, 10,  OUT_10MHz + OUT_PP, HIGH},	 
+			{ GPIOA, 11,  OUT_10MHz + OUT_PP, HIGH},	 
+			{ GPIOA, 12,  OUT_10MHz + OUT_PP, HIGH},	 
+			{ GPIOA, 15,  OUT_10MHz + OUT_PP, HIGH},	 
+
+			// { GPIOB, 3,  OUT_10MHz + OUT_PP, HIGH},	 
+			// { GPIOB, 4,  OUT_10MHz + OUT_PP, HIGH},	 
+			// { GPIOB, 5,  OUT_10MHz + OUT_PP, HIGH},	 
+			// { GPIOB, 6,  OUT_10MHz + OUT_PP, HIGH},	 
+			// { GPIOB, 7,  OUT_10MHz + OUT_PP, HIGH},	 
+			// { GPIOB, 8,  OUT_10MHz + OUT_PP, HIGH},	 
 
 			{ GPIOC, 13,  OUT_10MHz + OUT_PP, HIGH}	 
     };

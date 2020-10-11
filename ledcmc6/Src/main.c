@@ -25,13 +25,16 @@ int main(void){
     { 
         for (int j=0; j<6; j++){
             outDigit(digits[j],j); 
-            for(i=0;i<2000;i++){} 
+            for(i=0;i<200;i++){} 
         }
     }
 }
 
 void outDigit(byte d, int pos){
-    GPIOB->ODR |= mskB;  // тушим все выходы
+    // GPIOB->ODR |= mskB;  // тушим все выходы
+    for (int i=0; i<6; i++){
+        IO_SetLine(io_Back0+i,ON);  // зажигаем нужный выход 
+    }
     GPIOA->ODR = _PMV(GPIOA->IDR, mskA, (uint32)d);
     IO_SetLine(io_Back0+pos,OFF);  // зажигаем нужный выход
 }
