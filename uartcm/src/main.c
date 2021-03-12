@@ -18,7 +18,7 @@ __attribute__((noreturn))
 void Reset_Handler(){
     //Импортируем символы, которые мы создали в скрпите линковки
     extern uint8_t __data_start__, 
-           __data_end__, __data_lma__, 
+           __data_end__, __data_rom__, 
            __bss_start__, __bss_end__;
     uint8_t *dst;
 
@@ -28,7 +28,7 @@ void Reset_Handler(){
         *dst++ = 0;
 
     //Инициализируем переменные в .data данным из флеш-памяти
-    uint8_t *src = &__data_lma__;
+    uint8_t *src = &__data_rom__;
     dst = &__data_start__;
     while (dst < &__data_end__)
         *dst++ = *src++;
