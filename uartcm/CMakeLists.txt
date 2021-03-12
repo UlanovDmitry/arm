@@ -3,28 +3,28 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
 # defines
 ADD_DEFINITIONS(-DSTM32F103xB)
 
-#set(CMAKE_VERBOSE_MAKEFILE YES)
+set(CMAKE_VERBOSE_MAKEFILE YES)
 set(CMAKE_BUILD_TYPE Debug)
 
 # toolchain 
-include(stm32.cmake)
+include(stm32_toolchain.cmake)
 
-PROJECT(arm-nomagic-stm32)
+PROJECT(uartcm)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../drivers/CMSIS/Include/
                     ${CMAKE_CURRENT_SOURCE_DIR}/../drivers/CMSIS/Device/ST/STM32F1xx/Include/)
 
 SET(PROJECT_SOURCES
         src/main.c
-        src/main.h
-        src/startup.c
-        src/startup.h
+        #src/main.h
+        #src/startup.c
+        #src/startup.h
         )
 
 
 #linker script
 SET(LD_SCRIPT stm32f103c8.ld)
-SET(LD_SCRIPTS_DIR ${PROJECT_SOURCE_DIR}/ld-scripts/)
+SET(LD_SCRIPTS_DIR ${PROJECT_SOURCE_DIR}/scripts/)
 SET(CMAKE_EXE_LINKER_FLAGS "-L${LD_SCRIPTS_DIR} -T${LD_SCRIPT} ${CMAKE_EXE_LINKER_FLAGS}")
 
 
