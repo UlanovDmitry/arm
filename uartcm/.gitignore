@@ -3,3 +3,7 @@ build-*
 cmake-build*
 .idea
 *.bak
+*.o
+*.bin
+*.hex
+*.elf
