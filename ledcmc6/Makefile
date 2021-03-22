@@ -44,6 +44,7 @@ Src/system_stm32f1xx.c
 ASM_SOURCES =  \
 startup_stm32f103x6.s
 
+GCC_PATH = /opt/distrib/gcc-arm-none-eabi-10-2020-q4-major/bin
 
 #######################################
 # binaries

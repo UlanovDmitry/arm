@@ -21,6 +21,7 @@ void Reset_Handler(){
            __data_end__, __data_rom__, 
            __bss_start__, __bss_end__;
     uint8_t *dst;
+    uint32_t i;
 
     //Обнулим сецию BSS
     dst = &__bss_start__;
@@ -40,6 +41,7 @@ void Reset_Handler(){
     while(1){
         // Переключаем пин 13 на порте C
         GPIOC_ODR ^= GPIO_ODR_PIN_13;
+        for(i=0;i<200000;i++){}  // пауза 
     }
 }
  

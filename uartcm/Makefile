@@ -50,5 +50,11 @@ build: link
 clean: 
 	-rm -fR $(BUILD_DIR)/*
 
+flash: build 
+	st-flash write $(BUILD_DIR)/$(PROJECT_NAME).bin 0x08000000 
 
-PHONY: compile link list build clean all
+backup:
+	st-flash read $(BUILD_DIR)/backup.bin 0x08000000 0x20000
+
+
+PHONY: compile link list build clean flash backup all
