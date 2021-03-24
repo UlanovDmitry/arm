@@ -17,6 +17,7 @@ __attribute__((unused)) int var_c= 0x1234;
 __attribute__((noreturn))
 void Reset_Handler(){
     //Импортируем символы, которые мы создали в скрпите линковки
+    uint32_t i;
     extern uint8_t __data_start__, 
            __data_end__, __data_rom__, 
            __bss_start__, __bss_end__;
