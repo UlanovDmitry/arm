@@ -22,7 +22,6 @@ void Reset_Handler(){
            __data_end__, __data_rom__, 
            __bss_start__, __bss_end__;
     uint8_t *dst;
-    uint32_t i;
 
     //Обнулим сецию BSS
     dst = &__bss_start__;

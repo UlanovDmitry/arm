@@ -14,6 +14,7 @@ CP = $(BIN_PATH)/$(PREFIX)objcopy
 SZ = $(BIN_PATH)/$(PREFIX)size
 DP = $(BIN_PATH)/$(PREFIX)objdump
 NM = $(BIN_PATH)/$(PREFIX)nm --print-size -a -n
+GDB = $(BIN_PATH)/$(PREFIX)gdb -tui 
 HEX = $(CP) -O ihex
 BIN = $(CP) -O binary -S
 
@@ -56,5 +57,8 @@ flash: build
 backup:
 	st-flash read $(BUILD_DIR)/backup.bin 0x08000000 0x20000
 
+debug:
+	openocd -f scripts/stlink-v2.cfg -f target/stm32f1x.cfg &
+	$(GDB) $(BUILD_DIR)/$(PROJECT_NAME).elf
 
-PHONY: compile link list build clean flash backup all
+PHONY: compile link list build clean flash backup debug all
